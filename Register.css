@@ -1,0 +1,62 @@
+body.signup-page {
+    background: url('Images/view-luxurious-golden-ring-felt-jewelry-display\ \(1\).jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.signup-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    padding: 20px;
+}
+
+.signup-container {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #333; /* Dark background for inputs */
+    color: white; /* White text color for contrast */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #d4af37, #c19a34);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c19a34, #b3882d);
+    transform: translateY(-2px);
+}

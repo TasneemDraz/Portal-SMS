@@ -1,0 +1,299 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('Images/display-shiny-luxurious-golden-chain.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.4); /* Slight background color for better visibility */
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 20px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.navbar a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Container Styles */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1200px; /* Max width for the container */
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    margin-bottom: 20px; /* Space below the table */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensure table is wide enough for content */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+button {
+    background-color: #b3882d; /* Blue background for buttons */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #b3882d; /* Darker blue on hover */
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red background for delete buttons */
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 15px; /* Space between buttons vertically */
+    }
+    
+    .button-container button {
+        width: 100%; /* Full width of container */
+        max-width: 300px; /* Limit max width for better appearance on small screens */
+        margin: 0; /* Remove horizontal margin when buttons are stacked vertically */
+    }
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Dark overlay */
+}
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: 5% auto; /* Center the modal horizontally and add vertical margin */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box; /* Ensure padding is included in the total width */
+}
+
+/* Modal Header */
+.modal-header {
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+/* Modal Body */
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between the input fields */
+}
+
+.modal-body .input-group {
+    flex: 1 1 calc(50% - 15px); /* Two columns layout with space */
+    min-width: 300px; /* Ensure minimum width */
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-body input,
+.modal-body textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-body textarea {
+    min-height: 100px; /* Ensure enough height for textarea */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.modal-footer button {
+    background-color: #b3882d; /* Darker blue on hover */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.modal-footer button:hover {
+    background-color: #0056b3;
+}
+
+.modal-footer .cancel-btn {
+    background-color: #6c757d;
+}
+
+.modal-footer .cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.2em;
+    }
+
+    .modal-footer button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+}
+
+
+
+/* Pagination Controls */
+#paginationControls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination-btn {
+    background-color: #c19a34;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.pagination-btn:hover {
+    background-color: #b3882d;
+}
+
+.pagination-btn:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 15px; /* Space between buttons vertically */
+    }
+    
+    .button-container button {
+        width: 100%;
+        margin: 0; /* Remove margin when buttons are stacked vertically */
+    }
+}

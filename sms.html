@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message</title>
+    <link rel="stylesheet" href="sms.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="templete.html">Create Template</a>
+        <a href="alltempletes.html">Manage Template</a>
+        <a href="sms.html">Send SMS</a>
+        <a href="report.html">Report</a>
+        <a href="login.html">Logout</a>
+
+
+    </div>
+    <div class="form-container">
+        <h2>Send Message</h2>
+        <!-- Form Submission -->
+        <form id="sendMessageForm"> <!-- Updated ID -->
+            <div class="form-group">
+                <label for="recipients">Recipients</label>
+                <input type="text" id="recipients" name="recipients" required> <!-- Updated ID -->
+            </div>
+            <div class="form-group">
+                <label for="messageContent">Message Content:</label>
+                <textarea id="messageContent" name="messageContent" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- File Upload for Admin -->
+        <div id="fileUploadContainer">
+            <h2>Upload File to Send SMS</h2>
+            <form id="uploadFileForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fileInput">Choose CSV File:</label>
+                    <input type="file" id="fileInput" name="fileInput" accept=".csv" required>
+                </div>
+                <button type="submit">Upload and Send SMS</button>
+            </form>
+        </div>
+
+
+        <div id="responseMessage"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script src="sms.js"></script>
+</body>
+</html>

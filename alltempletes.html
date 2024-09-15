@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Templates</title>
+    <link rel="stylesheet" href="alltempletes.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="alltempletes.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="templete.html">Create Template</a>
+        <a href="alltempletes.html">Manage Template</a>
+        <a href="sms.html">Send SMS</a>
+        <a href="report.html">Report</a>
+        <a href="login.html">Logout</a>
+
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Manage Templates</h2>
+        <div class="table-wrapper">
+            <table id="templatesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Content</th>
+                        <th>Created By</th>
+                        <th>Created Date</th>
+                        <th>Last Modified</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Template rows will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div id="paginationControls"></div>
+    </div>
+
+   <!-- Edit Modal -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <div class="modal-header">
+            <h2>Edit Template</h2>
+        </div>
+        <div class="modal-body">
+            <div class="input-group">
+                <label for="templateID">ID:</label>
+                <input type="text" id="templateID" disabled>
+            </div>
+            <div class="input-group">
+                <label for="templateName">Name:</label>
+                <input type="text" id="templateName">
+            </div>
+            <div class="input-group" style="width: 100%;">
+                <label for="templateContent">Content:</label>
+                <textarea id="templateContent"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="saveChanges">Save Changes</button>
+            <button id="cancelEdit" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('Images/display-shiny-elegant-gold-chain.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    position: relative; /* For positioning the container absolutely within the body */
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%; /* Full width */
+    background-color: rgba(255, 255, 255, 0.089); /* Slight background color with transparency */
+    padding: 10px 0; /* Space around the items */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    border-bottom: 1px solid #ddd; /* Border below the navbar */
+    box-sizing: border-box;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color */
+    margin: 0 20px; /* Space between items */
+    font-weight: bold; /* Make text bold */
+    padding: 8px 12px; /* Padding around the text */
+    border-radius: 4px; /* Rounded corners for the links */
+}
+
+.navbar a:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+}
+
+/* Container Styles */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+    text-align: left; /* Align text to the left */
+}
+
+/* Header Styles */
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the header text */
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input and Textarea Styles */
+input, textarea {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+    display: block; /* Ensure inputs are block level */
+}
+
+/* Textarea Specific Styles */
+textarea {
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+    min-height: 100px; /* Set a minimum height for the textarea */
+}
+
+/* Button Style */
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #d4af37, #c19a34); /* Gold gradient background */
+    color: #fff; /* Off-white text color */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c19a34, #b3882d); /* Darker gold gradient on hover */
+    transform: translateY(-2px);
+}
+
+/* Error Styles */
+.error {
+    color: red;
+    font-size: 0.875em;
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Reduce the container width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Further reduce container width on mobile screens */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust the header font size on mobile screens */
+    }
+
+    label, input, textarea {
+        font-size: 14px; /* Adjust label and input text size on mobile screens */
+    }
+}

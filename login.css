@@ -1,0 +1,204 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('Images/view-luxurious-golden-ring-with-white-dust.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    height: 100vh;
+    margin: 0;
+    color: white; /* White text for better readability */
+    display: flex; /* Allows centering content */
+    justify-content: flex-end; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.login-wrapper {
+    background: transparent; /* No background color */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-right: 50px; /* Adds space from the right edge */
+    margin-bottom: 160px;
+}
+
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #D3B88C; /* Slightly lighter text color */
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: transparent; /* Dark input background */
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #d4af37, #c19a34);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c19a34, #b3882d);
+    transform: translateY(-2px);
+}
+
+.signup-link {
+    margin-top: 20px;
+    color: #ddd;
+}
+
+.signup-link a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+/* styles.css */
+.error-message {
+    color: #ff6b6b; /* Red color for the error message */
+    font-size: 0.875em; /* Slightly smaller font size */
+    display: block; /* Ensures the message takes its own line */
+    margin-top: -15px; /* Adjusts position to align with input field */
+    margin-bottom: 10px; /* Space between error message and next element */
+}
+
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 575px) {
+    .login-wrapper {
+        padding: 15px;
+        margin: 10px; /* Add margin to avoid edge issues on very small screens */
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 575px) {
+    body {
+        display: flex; /* Center content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        padding: 10px; /* Add some padding to prevent edge issues */
+    }
+
+    .login-wrapper {
+        padding: 15px;
+        margin: 0; /* Remove margin for extra small devices */
+        max-width: 100%; /* Ensure full width on very small screens */
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Small Devices (Phones) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body {
+        display: flex; /* Center content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        padding: 20px; /* Add some padding for small devices */
+    }
+
+    .login-wrapper {
+        padding: 20px;
+        margin: 0; /* Remove margin for small devices */
+        max-width: 100%; /* Ensure full width on small screens */
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px; /* Maintain font size for small devices */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 12px;
+        font-size: 16px; /* Maintain font size for small devices */
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        display: flex; /* Center content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        padding: 20px; /* Add padding for medium devices */
+    }
+
+    .login-wrapper {
+        max-width: 90%; /* Adjust width for tablets */
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px; /* Maintain font size for medium devices */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 12px;
+        font-size: 16px; /* Maintain font size for medium devices */
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .login-wrapper {
+        max-width: 80%; /* Adjust width for larger desktops */
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1200px) {
+    .login-wrapper {
+        max-width: 400px; /* Keep max-width consistent for large desktops */
+    }
+}
+
